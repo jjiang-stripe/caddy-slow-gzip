@@ -4,9 +4,9 @@
 	}
 
 	encode gzip {
-		// When this is set to 600, the client reads the servers' response writes ~immediately
-		// When this is set to 512, the client only reads the headers and doesn't receive the response writes until the entire
-		// response is written
+		# When this is set to 600, the client reads the servers' response writes ~immediately
+		# When this is set to 512, the client only reads the headers and doesn't receive the response writes until the entire
+		# response is written
 		minimum_length 600
 		match {
 			header Content-Type "*"
