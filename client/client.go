@@ -48,6 +48,7 @@ func main() {
 		n, err := reader.Read(buf)
 		if err != nil {
 			if err == io.EOF {
+				fmt.Printf("chunk: %d, read %d bytes\n", chunk, n)
 				break
 			}
 			log.Fatal(err)
